@@ -4,11 +4,17 @@ const plane = {
   color: 'red'
 };
 
-Reflect.defineMetadata('note', 'test', plane);
-Reflect.defineMetadata('height', 70, plane);
+// Reflect.defineMetadata('note', 'test', plane);
+// Reflect.defineMetadata('height', 70, plane);
 
-const note = Reflect.getMetadata('note', plane);
-const height = Reflect.getMetadata('height', plane);
+// const note = Reflect.getMetadata('note', plane);
+// const height = Reflect.getMetadata('height', plane);
+
+// console.log(note);
+// console.log(height);
+
+Reflect.defineMetadata('note', 'test2', plane, 'color');
+
+const note = Reflect.getMetadata('note', plane, 'color');
 
 console.log(note);
-console.log(height);
